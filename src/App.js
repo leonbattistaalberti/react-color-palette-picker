@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Pallette from './Pallette';
+import Palette from './Palette';
 import seedColors from './seedColors';
 
 function App () {
 	return (
 		<div>
-			<Pallette {...seedColors[4]} />
+			<Palette {...seedColors[4]} />
 		</div>
 	);
 }
