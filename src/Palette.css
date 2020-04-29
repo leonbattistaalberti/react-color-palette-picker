@@ -5,3 +5,28 @@
 .Palette-colors {
   height: 90%;
 }
+
+.slider {
+ width:  350px;
+margin: 20px;
+display: inline-block;
+}
+
+.rc-slider-track {
+  background-color: transparent;
+}
+
+.rc-slider-rail {
+  height: 8px;
+}
+
+.rc-slider-handle {
+  background-color: green;
+}
+
+.rc-slider-handle:active {
+  background-color: green;
+}
+.rc-slider-handle:focus {
+  background-color: green;
+}
