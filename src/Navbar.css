@@ -1,6 +1,18 @@
 .Navbar {
   display: flex;
   justify-content: center;
+  background: rgb(154, 228, 228);
+  border-bottom: 5px solid rgb(3, 3, 2);
+
+}
+
+.select-container {
+  margin: 0 1rem 0 auto;
+  box-sizing: border-box;
+}
+
+.level-text {
+  margin: 15px 10px 12px 10px;
 }
 
 .Palette {
