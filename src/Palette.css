@@ -30,3 +30,7 @@ display: inline-block;
 .rc-slider-handle:focus {
   background-color: green;
 }
+
+.Palette-footer{
+  background: blue;
+}
