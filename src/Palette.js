@@ -32,7 +32,7 @@ export default class Palette extends Component {
 					<div className='Palette'>
 						{/* Palette */}
 						<div className='Palette-colors'>
-							{/* Color boxes */}
+							{/* Color boxes - entire Palette */}
 							{colorBoxes}
 						</div>
 						{/* Todo: the Footer is not appearing */}
