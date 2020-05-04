@@ -45,9 +45,7 @@ class PaletteList extends Component {
 					</div>
 
 					<div className={classes.miniPalette}>
-						<MiniPalette />
 						{this.props.palettes.map((palette) => {
-							console.log(palette);
 							return <MiniPalette {...palette} />;
 						})}
 					</div>
