@@ -1,16 +1,60 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import MiniPalette from './MiniPalette';
+import { withStyles } from '@material-ui/styles';
 
-export default class PaletteList extends Component {
+const styles = {
+	root        : {
+		background     : `url(
+			'https://learninglab.si.edu/thumburl/thumbnail/1600x/inbound/resources/image/1289081/1474509842/file.jpg'
+    )`,
+		height         : '100%',
+		display        : 'flex',
+		alignItem      : 'flex-start',
+		justifyContent : 'center',
+	},
+	container   : {
+		width         : '50%',
+		border        : '1px solid white',
+		display       : 'flex',
+		alignItems    : 'flex-start',
+		flexDirection : 'column',
+	},
+	nav         : {
+		display    : 'flex',
+		alignItems : 'space-between',
+		flexWrap   : 'wrap',
+		color      : 'white',
+	},
+	miniPalette : {
+		width               : '100%',
+		boxSizing           : 'border-box',
+		display             : 'grid',
+		gridTemplateColumns : 'repeat(3, 30%)',
+		gridGap             : '5%',
+	},
+};
+
+class PaletteList extends Component {
 	render () {
-		const paletteList = this.props.palettes.map((c) => {
-			return (
-				<Link to={`/palette/${c.id}`}>
-					<h1>{c.paletteName}</h1>
-				</Link>
-			);
-		});
-		console.log(this.props.palettes);
-		return <div>{paletteList}</div>;
+		const { classes } = this.props;
+		return (
+			<div className={classes.root}>
+				<div className={classes.container}>
+					<div className={classes.nav}>
+						<h1>React Colors</h1>
+					</div>
+
+					<div className={classes.miniPalette}>
+						<MiniPalette />
+						{this.props.palettes.map((palette) => {
+							console.log(palette);
+							return <MiniPalette {...palette} />;
+						})}
+					</div>
+				</div>
+			</div>
+		);
 	}
 }
+
+export default withStyles(styles)(PaletteList);
