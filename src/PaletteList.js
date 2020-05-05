@@ -5,16 +5,16 @@ import { withStyles } from '@material-ui/styles';
 const styles = {
 	root        : {
 		background     : `url(
-			'https://learninglab.si.edu/thumburl/thumbnail/1600x/inbound/resources/image/1289081/1474509842/file.jpg'
-    )`,
-		height         : '100%',
+			'https://cdn11.bigcommerce.com/s-feud0ek893/images/stencil/1024x1024/products/12366/26655/catalan-landscape-the-hunter-192324_joan-miro__78481.1582998846.jpg?c=1'
+		)`,
+		backgroundSize : 'cover',
+		height         : '100vh',
 		display        : 'flex',
 		alignItem      : 'flex-start',
 		justifyContent : 'center',
 	},
 	container   : {
 		width         : '50%',
-		border        : '1px solid white',
 		display       : 'flex',
 		alignItems    : 'flex-start',
 		flexDirection : 'column',
