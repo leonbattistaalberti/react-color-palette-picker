@@ -18,7 +18,12 @@ export default class Palette extends Component {
 	};
 	render () {
 		const colorBoxes = this.props.palette.colors[this.state.level].map((c) => (
-			<ColorBox background={c[this.state.format]} name={c.name} key={c.id} />
+			<ColorBox
+				background={c[this.state.format]}
+				name={c.name}
+				key={c.id}
+				moreUrl={`/palette/${c.id}/${this.props.palette.id}`}
+			/>
 		));
 		return (
 			<React.Fragment>
